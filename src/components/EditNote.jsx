@@ -3,19 +3,19 @@ import { useSelector, useDispatch } from 'react-redux';
 import { changeEditNote } from '../redux/notes/notesSlice';
 function EditNote() {
     const dispatch = useDispatch();
-    const [editSubject, setEditSubject] = useState("");
+    const [editTitle, setEditTitle] = useState("");
     const [editItem, setEditItem] = useState("");
 
     const editItems = useSelector((state) => state.notes.editNote);
 
     const handleEdit = (e) => {
         e.preventDefault();
-        dispatch(changeEditNote({editSubject, editItem}));
+        dispatch(changeEditNote({editTitle, editItem}));
         setDefault();
     }
     const setDefault = () => {
         setEditItem("");
-        setEditSubject("");
+        setEditTitle("");
     }
   return (
     <div>
@@ -36,9 +36,9 @@ function EditNote() {
                                         type="text"
                                         className="form-control"
                                         id="recipient-name"
-                                        value={editSubject}
+                                        value={editTitle}
                                         placeholder={`${editItems.title}`}
-                                        onChange={(e) => setEditSubject(e.target.value)}
+                                        onChange={(e) => setEditTitle(e.target.value)}
                                     />
                                 </div>
                                 <div className="mb-3">

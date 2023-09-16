@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { nanoid } from "@reduxjs/toolkit";
+import { nanoid } from "nanoid";
 
 export const notesSlice = createSlice({
     name: "notes",
@@ -10,6 +10,36 @@ export const notesSlice = createSlice({
                 title: "Attempt",
                 color: "primary",
                 item: "Note app is including edit and delete.",
+                fullDate: "08.15.2023"
+            },
+            {
+                id: nanoid(),
+                title: "Note App",
+                color: "success",
+                item: "You can submit whatever you write on the text area, edit and delete process.",
+                fullDate: "08.15.2023"
+            },
+            {
+                id: nanoid(),
+                title: "Daily",
+                color: "warning",
+                item: "You can submit whatever you write on the text area, edit and delete process.",
+                fullDate: "08.15.2023"
+            },
+            {
+                id: nanoid(),
+                title: "Personal Blog",
+                color: "secondary",
+                item: "You can submit whatever you write on the text area, edit and delete process.",
+                fullDate: "08.15.2023"
+            }
+        ],
+        filteredNotes: [
+            {
+                id: nanoid(),
+                title: "Attempt",
+                color: "primary",
+                item: "You can submit whatever you write on the text area, edit and delete process.",
                 fullDate: "08.15.2023"
             },
             {

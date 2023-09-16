@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { filterNote } from "../redux/notes/notesSlice";
 
 
-function TextArea() {
+function TextsField() {
     const dispatch = useDispatch();
     const [title, setTitle] = useState("");
     const [item, setItem] = useState("");
@@ -135,4 +135,4 @@ function TextArea() {
    )
 }
 
-export default TextArea;
+export default TextsField;
